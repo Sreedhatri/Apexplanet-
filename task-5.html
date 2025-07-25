@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sree Dhatri's Portfolio</title>
+  <style>
+    :root {
+      --primary: #6a1b9a;
+      --secondary: #8e24aa;
+      --bg-light: #fdf7ff;
+      --bg-dark: #1a1a1a;
+      --text-light: #ffffff;
+      --text-dark: #2c2c2c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 4px solid #ffffff33;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    #toggle-theme {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: white;
+      color: var(--primary);
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #toggle-theme:hover {
+      background: #eee;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .project-card {
+      background: white;
+      margin-bottom: 25px;
+      padding: 20px;
+      border-left: 6px solid var(--primary);
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    footer {
+      background-color: #2b2b2b;
+      color: #ccc;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 60px;
+      font-size: 0.95rem;
+    }
+
+    body.dark .project-card {
+      background: #2c2c2c;
+      color: #f0f0f0;
+      border-left-color: var(--secondary);
+    }
+
+    body.dark #toggle-theme {
+      background-color: #444;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      .project-card {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hello, I'm Sree Dhatri</h1>
+    <p>AI/ML Explorer | Coding with Curiosity</p>
+    <button id="toggle-theme">Toggle Theme</button>
+  </header>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-card">
+      <strong>🧬 Disease Detection Using ML</strong>
+      Created an ML model that predicts disease categories based on symptoms, improving early diagnosis and user awareness.
+    </div>
+    <div class="project-card">
+      <strong>🧠 Brain Tumor Classification (CNN)</strong>
+      Used convolutional neural networks to classify MRI images with high accuracy — built and trained with deep learning.
+    </div>
+    <div class="project-card">
+      <strong>🌐 Personal Portfolio Website</strong>
+      Designed and developed this portfolio from scratch using HTML, CSS, JS — minimal, responsive, and all *me*!
+    </div>
+  </section>
+
+  <footer>
+    📧 Contact: sreedhatri.official@gmail.com &nbsp; | &nbsp; © 2025 Sree Dhatri
+  </footer>
+
+  <script>
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
